@@ -5,23 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GESTOR</title>
+    <link rel="icon" type="image/png" href="../imagenesGestor/logocuadrado.png" />
     <link rel="stylesheet" href="../Scripts/styles.css">
 
 </head>
 
 
-<body>    
+<body>
     <header class="header-container">
-        <div class="logo-wrapper">
-            <img loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/8521b646f735e140536d78feeac41b9b4d2833fca6491fb2272c9a308c604e53?placeholderIfAbsent=true&apiKey=38de4a36e10a4593a5287a202bfcfd76"
-                class="logo-image" alt="Company Logo" />
+        <div class="logomenu">
+            <img src="../imagenesGestor/logovar2.png" alt="" class="logo-image">
+            <!-- Botón de hamburguesa -->
+            <div class="menu-toggle" id="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
-        <nav class="nav-menu">
+
+        <!-- Menú de navegación -->
+        <nav class="nav-menu" id="nav-menu">
             <a href="#" class="nav-item">
                 <img loading="lazy"
                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/ad8caf366153528408cf1723c2b9f5f19b35dc433aba30fd454fa3516d364311?placeholderIfAbsent=true&apiKey=38de4a36e10a4593a5287a202bfcfd76"
-                    class="nav-icon" alt="" />
+                    class="nav-icon" alt="Inicio" />
                 <span class="nav-text">Inicio</span>
             </a>
             <a href="#" class="nav-item">
@@ -31,12 +38,14 @@
                 <span class="nav-text">Productos y Funcionalidades</span>
                 <img loading="lazy"
                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/85e5c613e8695478d6cde5ec358b558a98a15459a1b2feac792387d5319f06f2?placeholderIfAbsent=true&apiKey=38de4a36e10a4593a5287a202bfcfd76"
-                    class="nav-icon" alt="" />
+                    class="nav-icon" alt="Productos y Funcionalidades" />
             </a>
             <a href="#" class="nav-item">
                 <span class="nav-text">Contáctanos</span>
             </a>
         </nav>
+
+        <!-- Botón de inicio de sesión -->
         <div class="button-container">
             <div class="button">
                 <div class="button-text-container">
@@ -44,26 +53,28 @@
                 </div>
                 <div class="icon-container">
                     <div class="icon">
-                        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/c6a66bcc176b38aaeab606e554e7d1ff97bc8ad2e3e2b79e9d4f011255ec840b?placeholderIfAbsent=true&apiKey=38de4a36e10a4593a5287a202bfcfd76" class="login-button-icon" alt="" />
+                        <img loading="lazy"
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/c6a66bcc176b38aaeab606e554e7d1ff97bc8ad2e3e2b79e9d4f011255ec840b?placeholderIfAbsent=true&apiKey=38de4a36e10a4593a5287a202bfcfd76"
+                            class="login-button-icon" alt="Iniciar Sesión" />
                     </div>
                 </div>
             </div>
         </div>
-    </header>   
-    
+    </header>
+
     <section class="main">
         <h1>Sistema de Gestión de Inventarios y Ventas</h1>
         <div class="button-container">
             <div class="button">
-            <div class="button-text-container">
-                <div class="button-text">Quiero Iniciar</div>
-            </div>
-            <div class="icon-container">
-                <div class="icon">
-                    <i class="fa-solid fa-play"></i>
+                <div class="button-text-container">
+                    <div class="button-text">Quiero Iniciar</div>
+                </div>
+                <div class="icon-container">
+                    <div class="icon">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
                 </div>
             </div>
-        </div>
         </div>
         <div class="imagenes">
             <img src="../imagenesGestor/FLECHAIZQDA.png" alt="" class="flechas">
@@ -72,14 +83,101 @@
         </div>
 
         <div class="section2">
-            <h1>HOLA</h1>
+            <div class="text-container">
+                <h1>Soluciones rápidas para tu negocio.</h1>
+                <p>Con nuestro software de inventarios y ventas, simplificamos la gestión de tu negocio, optimizando el
+                    flujo de ventas y obteniendo reportes detallados. Agiliza tus procesos, evita pérdidas y toma
+                    decisiones
+                    inteligentes con una plataforma diseñada para ofrecer soluciones rápidas y eficientes. Todo lo que
+                    necesitas para mantener tu negocio siempre bajo control, al alcance de un clic.
+                </p>
+                <div class="button-container">
+                    <div class="button">
+                        <div class="button-text-container">
+                            <div class="button-text">Contáctanos</div>
+                        </div>
+                        <div class="icon-container">
+                            <div class="icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="shape-container">
+                <img src="../imagenesGestor/Background-blur.png" alt="">
+            </div>
         </div>
-              
+
+        <div class="section3">
+            <h1>¿Qué es GESTOR?</h1>
+
+            <div class="cuadros-container">
+                <div class="cuadro-info">
+                    <div class="icon">
+                        <i class="fa-regular fa-clock fa-4x"></i>
+                    </div>
+
+                    <div class="texto-info">
+                        <p> Plataforma avanzada de gestión de inventarios y ventas diseñada para optimizar el flujo de
+                            trabajo de tu
+                            empresa. Automatiza pedidos y realizar un seguimiento detallado de las ventas.</p>
+                    </div>
+                </div>
+
+                <div class="cuadro-info">
+                    <div class="icon">
+                        <i class="fa-solid fa-timeline fa-4x"></i>
+                    </div>
+
+                    <div class="texto-info">
+                        <p> Desde el seguimiento de productos hasta el análisis de ventas, GESTOR te ayuda a tomar
+                            decisiones más inteligentes y rápidas, para que puedas concentrarte en hacer crecer tu
+                            negocio
+                        </p>
+                    </div>
+                </div>
+
+                <div class="cuadro-info">
+                    <div class="icon">
+                        <i class="fa-regular fa-star fa-4x"></i>
+                    </div>
+
+                    <div class="texto-info">
+                        <p> Su interfaz intuitiva permite a los usuarios tener control absoluto de cada transacción,
+                            asegura
+                            una gestión ágil, segura y escalable. Innovación y eficiencia, todo en un solo lugar:
+                            GESTOR.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footerIndex">
+            <div class="legal">
+            <img src="../imagenesGestor/GESTORBLANCO.png" alt="">
+            <div class="credits">
+                <span>Software Gestor © </span>
+                <span>Medellín - Antioquia</span>
+            </div>
+            </div>
+            
+            <div class="listaFooter">
+                <a href="#">Términos</a>
+                <a href="#">Privacidad</a>
+                <a href="#">Soporte</a>
+                <a href="#">Sobre Nosotros</a>
+                <a href="#">Contacto</a>
+                <a href="#">Ventas</a>
+            </div>
+
+        </div>
+
 
     </section>
 
-
-
+    <script src="../Scripts/JS_Scripts/menuToggle.js"></script>
     <script src="https://kit.fontawesome.com/854b3fb9ba.js" crossorigin="anonymous"></script>
 </body>
 
