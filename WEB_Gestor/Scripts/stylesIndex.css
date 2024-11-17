@@ -1,6 +1,5 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-
 /* NAVMENU */
 .header-container {
     font-family: "Inter";
@@ -12,7 +11,7 @@
     flex-direction: row;
     gap: 50px ;
     flex-wrap: wrap;
-    padding: 15px;   
+    padding: 20px;   
     position: relative;
 }
 
@@ -58,6 +57,11 @@
     justify-content: start;
     height: 100%;
     padding: 12px 8px;
+    cursor: pointer;
+}
+
+.nav-item:hover{
+    color: #4c616e;
 }
 
 .logomenu{
