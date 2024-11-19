@@ -97,6 +97,7 @@
     background: linear-gradient(90deg, #2E7AAB 0%, #133145 100%);
     animation: ease-in 800ms;
     border-radius: 8px;
+    transform: scale(1.0);
 }
 
 
