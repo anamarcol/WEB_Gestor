@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+    font-family: 'Poppins';
+    font-size: 13px;
+    background-color: #f3f3f3;
+    /* background-color: #FCFCFC; COLOR PARA ITEMS */
+}
+
+main {
+    background-color: #f3f3f3;
+}
+
+
+/* DASHBOARD */
+.info-dashboard {
+    margin-top: 18px;
+    width: 384px;
+    height: 163px;
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Inter';
+
+
+    .info {
+        display: flex;
+        padding: 20px 16px 20px 16px;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    h2 {
+        margin: 0;
+        color: #383E49;
+        font-weight: 500;
+    }
+}
+
+.items-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.quantity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: 'Inter';
+
+    i {
+        display: flex;
+        width: 30px;
+        height: 30px;
+        padding: 4px 4.224px 4.224px 4px;
+        justify-content: center;
+        align-items: center;
+        font-size: 21px;
+        color: #24B8F1;
+        border-radius: 4px;
+        background: #E5F7FD;
+
+    }
+
+    #cantidadProductos,
+    #cantidadEmpleados {
+        font-weight: 600;
+        color: #5D6679;
+        font-size: 16px;
+    }
+
+    span {
+        color: #444;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+    }
+
+}
+
+/* INVENTARIO */
+
+.inventory-title {
+    margin-top: 18px;
+    height: 60px;
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;    
+    align-items: center;
+    font-family: 'Inter';
+    padding: 0 10px 0 10px;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.title img {
+    width: 30px;
+    height: 30px;
+}
+
+.button-container {
+    height: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    background: linear-gradient(90deg, #1B4865 0%, #3691CB 56%);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: border-radius 800ms cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.button-container:hover {
+    background: linear-gradient(90deg, #2E7AAB 0%, #133145 100%);
+    animation: ease-in 800ms;
+    border-radius: 8px;
+    transform: scale(1.1);
+}
+
+
+.button-text-container {
+    padding-right: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-text {
+    color: white;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    word-break: normal;
+}
+
+.icon-container {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+
+}
+
+.icon {
+    color: #ffffff;
+}

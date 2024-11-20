@@ -1,38 +1,135 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-body{
-    font-family: 'Poppins';    
+body {
+    font-family: 'Poppins';
+    padding: 0 10px 0 0;
+    display: flex;
+    flex-direction: row;
+    gap: 19px;
 }
 
-.navBar{
+/* SIDEBAR */
+.sidebar {
+    background-color: #FCFCFC;
     display: flex;
-    flex-direction: row;    
+    flex-direction: column;
+    padding: 19px 12px 505px 12px;
     align-items: center;
-    justify-content: center;
-    gap: 308px;
-    width: 1145px;
-    height: 85px;
-    box-shadow: #858d9d;
-    border: #858d9d;
-    background-color: #f1f1f1;
+    gap: 32px;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.25);
+    border-right: 1px solid #F0F1F3;
+    border-radius: 10px;
+    flex-shrink: 0;
+    width: 240px;
+    margin-left: auto;
+    font-family: 'Inter';
 }
 
-.userPhoto{
+.logo {
+    margin: 10px;    
+
+    img {
+        width: 140px;
+        height: auto;
+    }
+}
+
+.menu {
     display: flex;
-    flex-direction: row; 
+    flex-direction: column;
+    width: 232px;    
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+    padding: 8px 16px 8px 16px;
+}
+
+.items_menu {
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    padding: 8px 16px;
+    align-items: flex-start;
+    gap: 12px;
+
+    a {
+        text-decoration: none;        
+        text-align: left;
+    }    
+}
+
+.texto_menu {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+    align-self: stretch;
+    padding: 16px 10px;
+    width: 200px;      
+    
+    i, a{
+        color: rgb(37, 37, 37);
+        font-size: 16px;
+    }        
+}
+
+.texto_menu:hover{    
+    border-left: 4px solid #3691CB;         
+}
+
+.texto_menu i:hover, .texto_menu a:hover{
+    color: #3691CB;
+}
+
+.texto_menu.active {
+    border-left: 4px solid #3691CB; 
+}
+
+.texto_menu.active i, 
+.texto_menu.active a {
+    color: #3691CB;
+}
+
+
+/* NAVBAR */
+.navBar {
+    display: flex;
+    width: 1140px;    
+    height: 60px;
+    padding: 10px 32px 10px 32px;
+    align-items: center;    
+    flex-shrink: 0;
+    justify-content: space-between;
+    background-color: #FCFCFC;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.25);
+    border: #858d9d;
+    margin-left: auto;
+    border-radius: 10px;
+}
+
+.userPhoto {
+    display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 21px;
-    justify-content: flex-end;    
-    
-    img{
-        width: 70px;
-        height: auto;    
+    justify-content: flex-end;
+
+    img {
+        width: 65px;
+        height: auto;
         border-radius: 50%
     }
 
-    i{       
-        font-size: 20px; 
-        height: auto;        
+    i {
+        font-size: 20px;
+        height: auto;
+        cursor: pointer;
+    }
+
+    i:hover {
+        color: #3691CB;
     }
 }
 
@@ -41,26 +138,36 @@ body{
     width: 35%;
     left: 50%;
     top: 11%;
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: flex-start;
 }
+
 .search-inline {
-    width: 100%;        
+    width: 100%;
 }
 
-.search-inline--input {   
-    font-family: 'Poppins'; 
-    width: auto;
+.search-inline input {
+    color: #000;
+    font-family: Poppins;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.search-inline--input {
+    font-family: 'Poppins';
+    width: 400px;
+    height: auto;
     padding: 10px 10px 10px 45px;
     border: 1px solid #F0F1F3;
-    border-radius:10px;
+    border-radius: 10px;
     outline: none;
     color: #858d9d;
-    font-size:15px;
+    font-size: 15px;
     background: url("https://img.icons8.com/?size=100&id=59878&format=png&color=858d9d");
     background-repeat: no-repeat;
     background-position: 8px center;
     background-size: 1.675em;
 }
-
