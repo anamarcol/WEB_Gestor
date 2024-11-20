@@ -2,47 +2,87 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GESTOR Dashboard</title>
-    <link rel="icon" type="image/png" href="../imagenesGestor/logocuadrado.png" />
-    <!-- <link rel="stylesheet" href="../Scripts/stylesDashboard"> -->
-    <link rel="stylesheet" href="../Scripts/barsUserStyles.css">
-    <link rel="stylesheet" href="../Scripts/stylesDashboard.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GESTOR Dashboard</title>
+  <link rel="icon" type="image/png" href="../imagenesGestor/logocuadrado.png" />
+  <link rel="stylesheet" href="../Scripts/barsUserStyles.css">
+  <link rel="stylesheet" href="../Scripts/stylesDashboard.css">
 </head>
 
 <body>
 
-    <aside id="sidebar"></aside>
+  <aside id="sidebar"></aside>
 
-    <main>
-        <nav id="navbar"></nav>
+  <main>
+    <nav id="navbar"></nav>
 
-        <div class="inventory-title">
-            <div class="title">
-                <img src="https://em-content.zobj.net/source/apple/391/clipboard_1f4cb.png" alt="portapapeles">
-                <span>Productos</span>
+    <div class="inventory-title">
+      <div class="title">
+        <img src="https://em-content.zobj.net/source/apple/391/clipboard_1f4cb.png" alt="portapapeles">
+        <span>Productos</span>
+      </div>
+
+      <div class="button-container">
+        <div class="button">
+          <div class="button-text-container">
+            <div class="button-text">Añadir Productos</div>
+          </div>
+          <div class="icon-container">
+            <div class="icon">
+              <i class="fa-solid fa-circle-plus"></i>
             </div>
-
-            <div class="button-container">
-                <div class="button">
-                    <div class="button-text-container">
-                        <div class="button-text">Añadir Productos</div>
-                    </div>
-                    <div class="icon-container">
-                        <div class="icon">
-                            <i class="fa-solid fa-circle-plus"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-    
-    </main>
+      </div>
+    </div>
 
-    <script src="../Scripts/jquery-3.7.0.min.js"></script>
-    <script src="../Scripts/JS_Scripts/DefaultNavBar.js"></script>
-    <script src="https://kit.fontawesome.com/854b3fb9ba.js" crossorigin="anonymous"></script>
+    <!-- TABLA PRODUCTOS -->
+    <table class="inventory-table">
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>Productos</th>
+          <th>Precio</th>
+          <th>Cantidad</th>
+          <th>Fecha Expiración</th>
+          <th>Disponibilidad</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>001</td>
+          <td>Maggi</td>
+          <td>$2.000</td>
+          <td>43 Packets</td>
+          <td>11/12/25</td>
+          <td class="disponible">Disponible</td>
+          <td>
+            <i class="fa-solid fa-pen"></i>
+            <i class="fa-solid fa-trash"></i>
+          </td>
+        </tr>
+        <tr>
+          <td>002</td>
+          <td>Panelada</td>
+          <td>$1.000</td>
+          <td>22 Packets</td>
+          <td>21/12/24</td>
+          <td class="agotado">Agotado</td>
+          <td>
+            <i class="fa-solid fa-pen"></i>
+            <i class="fa-solid fa-trash"></i>
+          </td>
+        </tr>
+        <!-- Repite filas para más productos -->
+      </tbody>
+    </table>
+
+  </main>
+  <script src="../Scripts/jquery-3.7.0.min.js"></script>
+  <script src="../Scripts/JS_Scripts/DefaultNavBar.js"></script>
+  <script src="https://kit.fontawesome.com/854b3fb9ba.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

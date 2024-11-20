@@ -95,9 +95,7 @@ body {
 
 /* NAVBAR */
 .navBar {
-    display: flex;
-    width: 1140px;    
-    height: 60px;
+    display: flex;        
     padding: 10px 32px 10px 32px;
     align-items: center;    
     flex-shrink: 0;

@@ -9,7 +9,8 @@ body {
 }
 
 main {
-    background-color: #f3f3f3;
+    /* background-color: #f3f3f3;     */
+    width: 1440px;
 }
 
 
@@ -96,7 +97,7 @@ main {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     display: flex;
     flex-direction: row;
-    justify-content: space-between;    
+    justify-content: space-between;
     align-items: center;
     font-family: 'Inter';
     padding: 0 10px 0 10px;
@@ -137,8 +138,7 @@ main {
 .button-container:hover {
     background: linear-gradient(90deg, #2E7AAB 0%, #133145 100%);
     animation: ease-in 800ms;
-    border-radius: 8px;
-    transform: scale(1.1);
+    border-radius: 8px;     
 }
 
 
@@ -170,4 +170,65 @@ main {
 
 .icon {
     color: #ffffff;
+}
+
+/* TABLA */
+.inventory-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+    background: #FFF;
+    font-family: 'Inter';
+}
+
+.inventory-table th,
+.inventory-table td {
+    border: 1px solid #ddd;
+    padding: 14px;
+    color: #000;    
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.inventory-table thead th {
+    color: #667085;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    background: #FFF;
+}
+
+.inventory-table thead tr {
+    background-color: #f4f4f4;    
+}
+
+.inventory-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.inventory-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.inventory-table td i {
+    cursor: pointer;
+    margin: 0 5px;
+    color: #333;
+}
+
+.inventory-table td i:hover {
+    color: #3691CB;
+}
+
+.disponible {
+    color: green;
+    font-weight: bold;
+}
+
+.agotado {
+    color: red;
+    font-weight: bold;
 }
