@@ -9,8 +9,13 @@ body {
 }
 
 main {
-    /* background-color: #f3f3f3;     */
     width: 1440px;
+}
+
+.page.active {
+    filter: blur(2.950000047683716px);
+    pointer-events: none;
+    user-select: none;
 }
 
 
@@ -109,6 +114,7 @@ main {
     align-items: center;
     font-size: 20px;
     font-weight: 800;
+    gap: 10px;
 }
 
 .title img {
@@ -133,12 +139,13 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: row-reverse;
+    padding: 5px;
 }
 
 .button-container:hover {
     background: linear-gradient(90deg, #2E7AAB 0%, #133145 100%);
     animation: ease-in 800ms;
-    border-radius: 8px;     
+    border-radius: 8px;
 }
 
 
@@ -147,6 +154,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 5px;
 }
 
 .button-text {
@@ -159,13 +167,12 @@ main {
 }
 
 .icon-container {
-    width: 24px;
-    height: 24px;
+    width: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 5px;
-
+    font-size: 18px;
 }
 
 .icon {
@@ -181,13 +188,14 @@ main {
     text-align: left;
     background: #FFF;
     font-family: 'Inter';
+    gap: 85px;
 }
 
 .inventory-table th,
 .inventory-table td {
-    border: 1px solid #ddd;
+    border-right: 1px solid #ddd;
     padding: 14px;
-    color: #000;    
+    color: #000;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
@@ -202,7 +210,7 @@ main {
 }
 
 .inventory-table thead tr {
-    background-color: #f4f4f4;    
+    background-color: #f4f4f4;
 }
 
 .inventory-table tbody tr:nth-child(even) {
@@ -231,4 +239,234 @@ main {
 .agotado {
     color: red;
     font-weight: bold;
+}
+
+/* POPUP AGREGAR PRODUCTOS */
+.addProduct {
+    display: flex;
+    flex-direction: column;
+    width: 495px;
+    padding: 27px 28px;
+    align-content: center;
+    gap: 24px 12px;
+    flex-wrap: wrap;
+    border-radius: 8px;
+    border: 1px solid #3E3D3D;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+    .titulo {
+        display: flex;
+        flex-direction: row-reverse;
+        color: #000;
+        font-family: 'Inter';
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        align-items: center;
+        gap: 10px;
+        justify-content: flex-end;
+
+    }
+
+    .imgtext {
+        width: 25px;
+    }
+
+    .items-add {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 24px;
+        font-family: 'Inter';
+    }
+
+    .placeholderItem {
+        display: flex;
+        flex-direction: row;
+        gap: 87px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .placeholderItem span {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        color: #48505E;
+    }
+
+    .form-control {
+        display: flex;
+        padding: 10px 14px;
+        align-items: center;
+        gap: 8px;
+        align-self: stretch;
+        border-radius: 8px;
+        border: 1px solid #D0D5DD;
+        background: #FFF;
+        box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+        font-family: Inter;
+        font-size: 16px;
+
+    }
+
+    .input-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .buttonsAdd{
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        align-items: center;
+        justify-content: flex-start;        
+    }
+
+    .button-back {
+        height: 40px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        border: 1px solid #9C9C9C;
+        cursor: pointer;
+        transition: border-radius 800ms cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+
+    .button-back:hover{
+        background: #5457525b;
+        transform: scale(1.05);
+        transition: ease-in 100ms;
+    }
+
+    .back-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row-reverse;
+        padding: 5px;
+    }
+
+    .button-text#back, .icon#back {
+        color: #535353;
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 900;
+        word-break: normal;
+    }    
+
+
+    .button-container#addProduct{
+        height: 40px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        background: #49a800;
+        border-radius: 8px;        
+        cursor: pointer;
+        transition: border-radius 800ms cubic-bezier(0.25, 0.1, 0.25, 1);        
+    }
+
+    .button-container#addProduct:hover{        
+        background: #89ce1a;
+        transform: scale(1.05);
+        transition: ease-in 100ms;
+    }    
+
+    .button-text#addProduct-text, .icon#addProduct-icon{
+        color: #000;
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 900;
+        word-break: normal;
+    }
+
+}
+
+#popUp{
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+
+}
+
+#popUp.active{
+    visibility: visible;
+    top: 50%;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+
+/* REPORTES */
+.months{    
+    position: absolute; 
+    padding: 5px;        
+    background-color: #0056d6;
+    border-radius: 8px;
+    overflow: hidden;
+    color: #ffffff;          
+    display: none;   
+    top: 100%; 
+    transition: 50ms ease-in-out;
+
+    .listaReportes{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 16px;
+        justify-content: center;
+        justify-items: center;
+        padding: 0px;
+        margin: 5px;        
+    }
+
+    .dropdown-item{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+        cursor: pointer;
+        padding: 10px;
+        border: 1px solid #A6A6A6;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+    }
+
+    .dropdown-item:first-child {
+        border-top: none;        
+    }
+
+    .dropdown-item:last-child{
+        border-bottom: none;
+    }
+    
+    .dropdown-item:hover {
+        background-color: #001b3d57;
+        transform: scale(1.03);        
+        transition: ease-in-out 20ms;
+    }
+}
+
+.months.active{
+    display: block;        
+    transition: 0.5s;
+    margin: 0;
+    opacity: 1;        
+    top: 25%; 
+    transition: 50ms ease-in-out;
 }

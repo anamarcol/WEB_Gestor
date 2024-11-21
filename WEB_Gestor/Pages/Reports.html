@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GESTOR Dashboard</title>
+    <link rel="icon" type="image/png" href="../imagenesGestor/logocuadrado.png" />
+    <link rel="stylesheet" href="../Scripts/barsUserStyles.css">
+    <link rel="stylesheet" href="../Scripts/stylesDashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <aside id="sidebar"></aside>
+
+    <main>
+        <nav id="navbar"></nav>
+
+        <div class="inventory-title"> 
+            <div class="title">
+                <img src="https://em-content.zobj.net/source/apple/391/clipboard_1f4cb.png" alt="portapapeles">
+                <span>Informe Mensual</span>
+            </div>
+
+            <div class="button-container" onclick="downloadPDF()"> <!--AQUI VA EL ONCLICK, LUEGO EL DOWNLOADPDF VA EN C/ ITEM DE mes-->
+                <div class="button">
+                    <div class="button-text-container">
+                        <div class="button-text">Descargar PDF</div>
+                    </div>
+                    <div class="icon-container">
+                        <div class="icon">
+                            <i class="fa-solid fa-file-pdf"></i>
+                        </div>
+                    </div>
+                </div> 
+                <div class="months" id="monthsReports">
+                    <ul class="listaReportes" id="monthList">
+                        <li class="dropdown-item" onclick="successDownload()">
+                            <i class="fa-solid fa-rotate-right"></i> Junio
+                        </li>
+                        <li class="dropdown-item" onclick="successDownload()">
+                            <i class="fa-solid fa-rotate-right"></i> Julio
+                        </li>
+                        <li class="dropdown-item" onclick="successDownload()">
+                            <i class="fa-solid fa-rotate-right"></i> Agosto
+                        </li>
+                    </ul>
+                </div>               
+            </div>                        
+        </div>
+        
+
+
+        <div class="inventory-title">
+            <div class="title">
+                <img src="https://em-content.zobj.net/source/apple/391/clipboard_1f4cb.png" alt="portapapeles">
+                <span>Informe Stock Actual</span>
+            </div>
+
+            <div class="button-container" onclick="successDownload()">
+                <div class="button">
+                    <div class="button-text-container">
+                        <div class="button-text">Descargar PDF</div>
+                    </div>
+                    <div class="icon-container">
+                        <div class="icon">
+                            <i class="fa-solid fa-file-pdf"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+    </main>
+
+
+
+
+
+    <script src="../Scripts/jquery-3.7.0.min.js"></script>
+    <script src="../Scripts/JS_Scripts/DefaultNavBar.js"></script>
+    <script src="../Scripts/JS_Scripts/blurPage.js"></script>
+    <script src="https://kit.fontawesome.com/854b3fb9ba.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

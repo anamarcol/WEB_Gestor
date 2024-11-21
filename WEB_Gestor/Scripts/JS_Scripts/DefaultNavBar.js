@@ -5,8 +5,16 @@ jQuery(function () {
     });
 
     $("#navbar").load("../Pages/navbar.html", function () {
-        console.log("navbar cargado correctamente.");
-    
+        console.log("navbar cargado correctamente.");    
+    });
+
+    $(document).on('click', '#cerrarSesion', function () {
+        toggleOut();
     });
 });
+
+function toggleOut(){    
+    var signout = document.getElementById('signOut');
+    signout.classList.toggle('active');
+}
 

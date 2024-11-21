@@ -8,6 +8,7 @@
   <link rel="icon" type="image/png" href="../imagenesGestor/logocuadrado.png" />
   <link rel="stylesheet" href="../Scripts/barsUserStyles.css">
   <link rel="stylesheet" href="../Scripts/stylesDashboard.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -15,73 +16,143 @@
   <aside id="sidebar"></aside>
 
   <main>
-    <nav id="navbar"></nav>
+    <div class="page" id="blur">
+      <nav id="navbar"></nav>
 
-    <div class="inventory-title">
-      <div class="title">
-        <img src="https://em-content.zobj.net/source/apple/391/clipboard_1f4cb.png" alt="portapapeles">
-        <span>Productos</span>
-      </div>
+      <div class="inventory-title">
+        <div class="title">
+          <img src="https://em-content.zobj.net/source/apple/391/clipboard_1f4cb.png" alt="portapapeles">
+          <span>Productos</span>
+        </div>
 
-      <div class="button-container">
-        <div class="button">
-          <div class="button-text-container">
-            <div class="button-text">Añadir Productos</div>
-          </div>
-          <div class="icon-container">
-            <div class="icon">
-              <i class="fa-solid fa-circle-plus"></i>
+        <div class="button-container" onclick="toggle()">
+          <div class="button">
+            <div class="button-text-container">
+              <div class="button-text">Añadir Productos</div>
+            </div>
+            <div class="icon-container">
+              <div class="icon">
+                <i class="fa-solid fa-circle-plus"></i>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- TABLA PRODUCTOS -->
+      <table id="tblProductos" class="inventory-table">
+        <thead>
+          <tr>
+            <th>Código</th>
+            <th>Productos</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Fecha Expiración</th>
+            <th>Disponibilidad</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+      </table>
     </div>
 
-    <!-- TABLA PRODUCTOS -->
-    <table class="inventory-table">
-      <thead>
-        <tr>
-          <th>Código</th>
-          <th>Productos</th>
-          <th>Precio</th>
-          <th>Cantidad</th>
-          <th>Fecha Expiración</th>
-          <th>Disponibilidad</th>
-          <th>Acciones</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>001</td>
-          <td>Maggi</td>
-          <td>$2.000</td>
-          <td>43 Packets</td>
-          <td>11/12/25</td>
-          <td class="disponible">Disponible</td>
-          <td>
-            <i class="fa-solid fa-pen"></i>
-            <i class="fa-solid fa-trash"></i>
-          </td>
-        </tr>
-        <tr>
-          <td>002</td>
-          <td>Panelada</td>
-          <td>$1.000</td>
-          <td>22 Packets</td>
-          <td>21/12/24</td>
-          <td class="agotado">Agotado</td>
-          <td>
-            <i class="fa-solid fa-pen"></i>
-            <i class="fa-solid fa-trash"></i>
-          </td>
-        </tr>
-        <!-- Repite filas para más productos -->
-      </tbody>
-    </table>
+    <!-- POP UP AGREGAR PRODUCTOS -->
+    <div id="popUp">
+      <div class="addProduct">
+
+        <div class="titulo">
+          <img src="https://em-content.zobj.net/source/apple/391/partying-face_1f973.png" alt="check-button"
+            class="imgtext" />
+          <span>Nuevo Producto</span>
+        </div>
+
+        <div class="items-add">
+          <div class="placeholderItem">
+            <span>Nombre</span>
+            <div class="input-wrapper">
+              <input type="text" class="form-control" id="txtNombreProducto" placeholder="Nombre del producto">
+            </div>
+          </div>
+
+          <div class="placeholderItem">
+            <span>Código</span>
+            <div class="input-wrapper">
+              <input type="text" class="form-control" id="txtCodProducto" placeholder="Código de barras">
+            </div>
+          </div>
+
+          <div class="placeholderItem">
+            <span>Categoría</span>
+            <div class="input-wrapper">
+              <input type="text" class="form-control" id="txtCategoria" placeholder="Categoría del producto">
+            </div>
+          </div>
+
+          <div class="placeholderItem">
+            <span>Precio</span>
+            <div class="input-wrapper">
+              <input type="text" class="form-control" id="txtPrecio" placeholder="Precio del producto">
+            </div>
+          </div>
+
+          <div class="placeholderItem">
+            <span>Cantidad</span>
+            <div class="input-wrapper">
+              <input type="text" class="form-control" id="txtCantidad" placeholder="Cantidad en Stock">
+            </div>
+          </div>
+
+          <div class="placeholderItem">
+            <span>Unidad</span>
+            <div class="input-wrapper">
+              <input type="text" class="form-control" id="txtUnidad" placeholder="Unidad de Medida">
+            </div>
+          </div>
+
+          <div class="placeholderItem">
+            <span>Fecha Expiración</span>
+            <div class="input-wrapper">
+              <input type="text" class="form-control" id="txtFEV" placeholder="Fecha de Vencimiento">
+            </div>
+          </div>
+        </div>
+
+        <div class="buttonsAdd">
+
+          <div class="button-container" onclick="addProduct()" id="addProduct">
+            <div class="button">
+              <div class="button-text-container">
+                <div class="button-text" id="addProduct-text">Añadir Producto</div>
+              </div>
+              <div class="icon-container">
+                <div class="icon" id="addProduct-icon">
+                  <i class="fa-regular fa-face-smile"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="button-back" onclick="goBack()">
+            <div class="back-container">
+              <div class="button-text-container">
+                <div class="button-text" id="back">Regresar</div>
+              </div>
+              <div class="icon-container">
+                <div class="icon" id="back">
+                  <i class="fa-solid fa-chevron-left"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
 
   </main>
+
   <script src="../Scripts/jquery-3.7.0.min.js"></script>
   <script src="../Scripts/JS_Scripts/DefaultNavBar.js"></script>
+  <script src="../Scripts/JS_Scripts/blurPage.js"></script>
   <script src="https://kit.fontawesome.com/854b3fb9ba.js" crossorigin="anonymous"></script>
 </body>
 

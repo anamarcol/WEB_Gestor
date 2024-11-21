@@ -1,13 +1,31 @@
-    <nav class="navBar" id="navbar">
-        <div class="content-inline">
-            <div class="search-inline">
-                <input name="txtSearch" class="search-inline--input" placeholder="Busca productos o empleados.">
+<nav class="navBar" id="navbar">
+    <div class="content-inline">
+        <div class="search-inline">
+            <input name="txtSearch" class="search-inline--input" placeholder="Busca productos o empleados.">
+        </div>
+    </div>
+
+    <div class="userPhoto">
+        <i class="fa-solid fa-bell"></i>
+        <img src="../imagenesGestor/ANGELYYO.JPG" alt="Foto de perfil" class="fotoPerfil">
+        <i class="fa-solid fa-angle-down" onclick="toggleOut()"></i>
+
+        <div id="signOut">
+            <div class="button-container" id="cerrarSesion">
+                <a href="../Pages/Index.html">
+                    <div class="button">
+                        <div class="button-text-container">
+                            <div class="button-text">Cerrar Sesión</div>
+                        </div>
+                        <div class="icon-container">
+                            <div class="icon">
+                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
+    </div>
 
-        <div class="userPhoto">
-            <i class="fa-solid fa-bell"></i>
-            <img src="../imagenesGestor/ANGELYYO.JPG" alt="Foto de perfil" class="fotoPerfil">
-            <i class="fa-solid fa-angle-down"></i>
-        </div>
-    </nav>    
+</nav>

@@ -113,6 +113,7 @@ body {
     align-items: center;
     gap: 21px;
     justify-content: flex-end;
+    position: relative;
 
     img {
         width: 65px;
@@ -168,4 +169,24 @@ body {
     background-repeat: no-repeat;
     background-position: 8px center;
     background-size: 1.675em;
+}
+
+/* CERRAR SESIÓN */
+#signOut{
+    position: absolute; 
+    top: 50%; 
+    right: 0; 
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out; 
+    border-radius: 10px;    
+    z-index: 100;  
+    margin-top: 10px; 
+}
+
+#signOut.active{    
+    visibility: visible;
+    top: 100%;
+    opacity: 1;
+    transition: 0.5s;
 }

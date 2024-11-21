@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GESTOR Dashboard</title>
+    <link rel="icon" type="image/png" href="../imagenesGestor/logocuadrado.png" />
+    <link rel="stylesheet" href="../Scripts/barsUserStyles.css">
+    <link rel="stylesheet" href="../Scripts/stylesDashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+
+    <aside id="sidebar"></aside>
+
+    <main>
+        <div class="page" id="blur">
+            <nav id="navbar"></nav>
+
+            <div class="inventory-title">
+                <div class="title">
+                    <img src="https://em-content.zobj.net/source/apple/391/bust-in-silhouette_1f464.png" alt="portapapeles">
+                    <span>Empleados</span>
+                </div>
+
+                <div class="button-container" onclick="toggle()">
+                    <div class="button">
+                        <div class="button-text-container">
+                            <div class="button-text">Añadir Empleados</div>
+                        </div>
+                        <div class="icon-container">
+                            <div class="icon">
+                                <i class="fa-solid fa-circle-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TABLA PRODUCTOS -->
+            <table id="tblProductos" class="inventory-table">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Nombre</th>
+                        <th>Cargo</th>
+                        <th>Área</th>                        
+                        <th>Disponibilidad</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+
+        <!-- POP UP AGREGAR PRODUCTOS -->
+        <div id="popUp">
+            <div class="addProduct">
+
+                <div class="titulo">
+                    <img src="https://em-content.zobj.net/source/apple/391/partying-face_1f973.png" alt="check-button"
+                        class="imgtext" />
+                    <span>Nuevo Empleado</span>
+                </div>
+
+                <div class="items-add">
+                    <div class="placeholderItem">
+                        <span>Nombre</span>
+                        <div class="input-wrapper">
+                            <input type="text" class="form-control" id="txtNombreProducto"
+                                placeholder="Nombre del empleado">
+                        </div>
+                    </div>
+
+                    <div class="placeholderItem">
+                        <span>Cédula</span>
+                        <div class="input-wrapper">
+                            <input type="text" class="form-control" id="txtCodProducto" placeholder="Número de identificación del empleado">
+                        </div>
+                    </div>
+
+                    <div class="placeholderItem">
+                        <span>Área</span>
+                        <div class="input-wrapper">
+                            <input type="text" class="form-control" id="txtCategoria"
+                                placeholder="Área de trabajo">
+                        </div>
+                    </div>                    
+
+                    <div class="placeholderItem">
+                        <span>Disponibilidad</span>
+                        <div class="input-wrapper">
+                            <input type="text" class="form-control" id="txtUnidad" placeholder="¿Está disponible?">
+                        </div>
+                    </div>                   
+                </div>
+
+                <div class="buttonsAdd">
+
+                    <div class="button-container" onclick="addEmployee()" id="addProduct">
+                        <div class="button">
+                            <div class="button-text-container">
+                                <div class="button-text" id="addProduct-text">Añadir Empleado</div>
+                            </div>
+                            <div class="icon-container">
+                                <div class="icon" id="addProduct-icon">
+                                    <i class="fa-regular fa-face-smile"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="button-back" onclick="goBack()">
+                        <div class="back-container">
+                            <div class="button-text-container">
+                                <div class="button-text" id="back">Regresar</div>
+                            </div>
+                            <div class="icon-container">
+                                <div class="icon" id="back">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="../Scripts/jquery-3.7.0.min.js"></script>
+    <script src="../Scripts/JS_Scripts/DefaultNavBar.js"></script>
+    <script src="../Scripts/JS_Scripts/blurPage.js"></script>
+    <script src="https://kit.fontawesome.com/854b3fb9ba.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
