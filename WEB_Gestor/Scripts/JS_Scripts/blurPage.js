@@ -50,3 +50,13 @@ function addEmployee() {
         imageAlt: "Felicidades"
     });
 }
+
+function successSale() {
+    Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "La descarga ha sido exitosa",
+        showConfirmButton: false,
+        timer: 1500
+    });
+}

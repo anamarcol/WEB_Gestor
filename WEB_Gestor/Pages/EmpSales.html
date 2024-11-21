@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GESTOR Dashboard</title>
+    <link rel="icon" type="image/png" href="../imagenesGestor/logocuadrado.png" />
+    <link rel="stylesheet" href="../Scripts/barsUserStyles.css">
+    <link rel="stylesheet" href="../Scripts/stylesDashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+
+    <aside id="sidebar"></aside>
+
+    <main>
+        <nav id="navbar"></nav>
+
+        <div class="consultaProductos"> <!--Columna-->
+            <div class="titulo">
+                <img src="https://em-content.zobj.net/source/apple/391/partying-face_1f973.png" alt="check-button"
+                    class="imgtext" />
+                <span>🛍️Nuevo Pedido🛒</span>
+            </div>
+
+            <div class="placeholderProductos"> <!--Fila-->
+                <div class="placeholderItem">
+                    <span>Nombre</span>
+                    <div class="input-wrapper">
+                        <input type="text" class="form-control" id="txtNombreProducto"
+                            placeholder="Nombre del producto">
+                    </div>
+                </div>
+
+                <div class="placeholderItem">
+                    <span>Código</span>
+                    <div class="input-wrapper">
+                        <input type="text" class="form-control" id="txtCodProducto" placeholder="Código de barras">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="consultaProductos">
+            <div class="titulo">
+                <span>Factura🛒</span>
+            </div>
+
+            <table id="tblFactura" class="inventory-table">
+                <thead>
+                    <tr>
+                        <th>Productos</th>
+                        <th>Código</th>
+                        <th>Cantidad</th>
+                        <th>Precio Unitario</th>
+                        <th>Precio Venta</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+            </table>
+
+            <div class="buttonsAdd">
+
+                <div class="button-container" onclick="successSale()" id="addProduct">
+                    <div class="button">
+                        <div class="button-text-container">
+                            <div class="button-text" id="addProduct-text">Realizar Venta</div>
+                        </div>
+                        <div class="icon-container">
+                            <div class="icon" id="addProduct-icon">
+                                <i class="fa-regular fa-face-smile"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="button-back" onclick="goBack()"> <!--CAMBIAR ONCLICK-->
+                    <div class="back-container">
+                        <div class="button-text-container">
+                            <div class="button-text" id="back">Limpiar</div>
+                        </div>
+                        <div class="icon-container">
+                            <div class="icon" id="back">
+                                <i class="fa-solid fa-broom"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="../Scripts/jquery-3.7.0.min.js"></script>
+    <script src="../Scripts/JS_Scripts/EmpNavBar.js"></script>
+    <script src="../Scripts/JS_Scripts/blurPage.js"></script>
+    <script src="https://kit.fontawesome.com/854b3fb9ba.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

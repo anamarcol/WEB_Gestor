@@ -253,142 +253,141 @@ main {
     border-radius: 8px;
     border: 1px solid #3E3D3D;
     background: #FFF;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);    
+}
 
-    .titulo {
-        display: flex;
-        flex-direction: row-reverse;
-        color: #000;
-        font-family: 'Inter';
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 700;
-        align-items: center;
-        gap: 10px;
-        justify-content: flex-end;
+.titulo {
+    display: flex;
+    flex-direction: row-reverse;
+    color: #000;
+    font-family: 'Inter';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-end;
 
-    }
+}
 
-    .imgtext {
-        width: 25px;
-    }
+.imgtext {
+    width: 25px;
+}
 
-    .items-add {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 24px;
-        font-family: 'Inter';
-    }
+.items-add {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+    font-family: 'Inter';
+}
 
-    .placeholderItem {
-        display: flex;
-        flex-direction: row;
-        gap: 87px;
-        align-items: center;
-        justify-content: space-between;
-    }
+.placeholderItem {
+    display: flex;
+    flex-direction: row;
+    gap: 87px;
+    align-items: center;
+    justify-content: space-between;
+}
 
-    .placeholderItem span {
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 500;
-        color: #48505E;
-    }
+.placeholderItem span {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    color: #48505E;
+}
 
-    .form-control {
-        display: flex;
-        padding: 10px 14px;
-        align-items: center;
-        gap: 8px;
-        align-self: stretch;
-        border-radius: 8px;
-        border: 1px solid #D0D5DD;
-        background: #FFF;
-        box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
-        font-family: Inter;
-        font-size: 16px;
+.form-control {
+    display: flex;
+    padding: 10px 14px;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    border-radius: 8px;
+    border: 1px solid #D0D5DD;
+    background: #FFF;
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    font-family: Inter;
+    font-size: 16px;
 
-    }
+}
 
-    .input-wrapper {
-        position: relative;
-        display: flex;
-        align-items: center;
-    }
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
 
-    .buttonsAdd{
-        display: flex;
-        flex-direction: row;
-        gap: 12px;
-        align-items: center;
-        justify-content: flex-start;        
-    }
+.buttonsAdd{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+    justify-content: flex-start;        
+}
 
-    .button-back {
-        height: 40px;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        gap: 16px;
-        background-color: #ffffff;
-        border-radius: 8px;
-        border: 1px solid #9C9C9C;
-        cursor: pointer;
-        transition: border-radius 800ms cubic-bezier(0.25, 0.1, 0.25, 1);
-    }
+.button-back {
+    height: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #9C9C9C;
+    cursor: pointer;
+    transition: border-radius 800ms cubic-bezier(0.25, 0.1, 0.25, 1);
+}
 
-    .button-back:hover{
-        background: #5457525b;
-        transform: scale(1.05);
-        transition: ease-in 100ms;
-    }
+.button-back:hover{
+    background: #5457525b;
+    transform: scale(1.05);
+    transition: ease-in 100ms;
+}
 
-    .back-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row-reverse;
-        padding: 5px;
-    }
+.back-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding: 5px;
+}
 
-    .button-text#back, .icon#back {
-        color: #535353;
-        font-family: Inter;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 900;
-        word-break: normal;
-    }    
+.button-text#back, .icon#back {
+    color: #535353;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 900;
+    word-break: normal;
+}    
 
 
-    .button-container#addProduct{
-        height: 40px;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        gap: 16px;
-        background: #49a800;
-        border-radius: 8px;        
-        cursor: pointer;
-        transition: border-radius 800ms cubic-bezier(0.25, 0.1, 0.25, 1);        
-    }
+.button-container#addProduct{
+    height: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    background: #49a800;
+    border-radius: 8px;        
+    cursor: pointer;
+    transition: border-radius 800ms cubic-bezier(0.25, 0.1, 0.25, 1);        
+}
 
-    .button-container#addProduct:hover{        
-        background: #89ce1a;
-        transform: scale(1.05);
-        transition: ease-in 100ms;
-    }    
+.button-container#addProduct:hover{        
+    background: #89ce1a;
+    transform: scale(1.05);
+    transition: ease-in 100ms;
+}    
 
-    .button-text#addProduct-text, .icon#addProduct-icon{
-        color: #000;
-        font-family: Inter;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 900;
-        word-break: normal;
-    }
-
+.button-text#addProduct-text, .icon#addProduct-icon{
+    color: #000;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 900;
+    word-break: normal;
 }
 
 #popUp{
@@ -490,3 +489,37 @@ main {
 .btnEditar:hover i, .btnEliminar:hover i {
     transform: scale(1.1);
 }
+
+
+/* EMPLEADOS */
+.consultaProductos{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background-color: #FFF;
+    margin-top: 20px;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.25);
+    border-right: 1px solid #F0F1F3;
+    border-radius: 10px;
+    gap: 20px;
+    font-family: 'Inter';    
+}
+
+.placeholderProductos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    .placeholderItem{
+        gap: 30px;
+    }
+}
+
+#tblFactura.inventory-table thead th{
+    background-color:#5494d8;
+    color: #000;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+
