@@ -55,7 +55,7 @@ function successSale() {
     Swal.fire({
         position: "center",
         icon: "success",
-        title: "La descarga ha sido exitosa",
+        title: "La venta se ha realizado exitosamente.",
         showConfirmButton: false,
         timer: 1500
     });
