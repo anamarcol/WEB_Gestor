@@ -470,3 +470,23 @@ main {
     top: 25%; 
     transition: 50ms ease-in-out;
 }
+
+/* EDIT - DELETE */
+.btnEditar, .btnEliminar {
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.btnEditar i {
+    color: #007bff; 
+}
+
+.btnEliminar i {
+    color: #dc3545; 
+}
+
+.btnEditar:hover i, .btnEliminar:hover i {
+    transform: scale(1.1);
+}
